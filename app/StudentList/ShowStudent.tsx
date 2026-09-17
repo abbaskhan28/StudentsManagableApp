@@ -33,6 +33,16 @@ export default function ShowStudent() {
     getStudents();
   }, []);
 
+  const handleDelete = async (id: number) => {
+    const responce = await fetch(`/api/students?id=${id}`, {
+      method: "DELETE",
+    });
+
+    if (responce.ok) {
+      setStudents((prev) => prev.filter((student) => student.id !== id));
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#f6f3ec] px-4 py-10 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-6xl">
@@ -98,6 +108,17 @@ export default function ShowStudent() {
                     >
                       {student.result}
                     </span>
+                  </td>
+
+                  <td className="px-5 py-4">
+                    {" "}
+                    <button
+                      onClick={() => handleDelete(student.id)}
+                      className="rounded-lg bg-red-50 px-4 py-2 text-sm font-semibold text-red-600 transition hover:bg-red-600 hover:text-white"
+                    >
+                      {" "}
+                      Delete{" "}
+                    </button>{" "}
                   </td>
                 </tr>
               ))}

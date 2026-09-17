@@ -43,3 +43,28 @@ export async function GET(request: Request) {
     );
   }
 }
+
+export async function DELETE(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const id = searchParams.get("id");
+
+  try {
+    if (!id) {
+      return Response.json(
+        { message: "Student ID is required" },
+        { status: 400 },
+      );
+    }
+
+    await db.query("DELETE FROM students WHERE id = ?", [id]);
+
+    return Response.json({ message: "Student deleted successfully" });
+  } catch (error) {
+    console.error(error);
+
+    return Response.json(
+      { message: "Failed to delete student" },
+      { status: 500 },
+    );
+  }
+}

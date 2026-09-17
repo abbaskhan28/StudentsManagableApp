@@ -53,7 +53,7 @@ export default function AddStudent() {
       className="min-h-screen w-full flex items-center justify-center px-4 py-14"
       style={{
         background:
-          "radial-gradient(circle at 10% 5%, #275769 0%, #10243b 39%, #081522 100%)",
+          "radial-gradient(ellipse at 50% -10%, #f4f4f5 0%, #e9eaeb 45%, #dcdde0 100%)",
       }}
     >
       <style>{`
@@ -65,27 +65,26 @@ export default function AddStudent() {
 
       <div className="w-full max-w-3xl">
         {/* Header */}
-        <div className="mb-10 flex items-end justify-between border-b border-white/10 pb-6">
+        <div className="mb-10 flex items-end justify-between border-b border-[#1c2b38]/12 pb-6">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#d9bb77] mb-2">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8a7548] mb-2">
               Student Records
             </p>
-            <h1 className="serif-display text-4xl text-[#fffdf8] leading-none">
+            <h1 className="serif-display text-4xl text-[#26282b] leading-none">
               Add a new student
             </h1>
           </div>
           <div className="hidden sm:block text-right">
-            <p className="text-xs text-[#8fa8b5]">Record ID</p>
-            <p className="serif-display text-lg text-[#f8e8bf]">#0142</p>
+            <p className="text-xs text-[#6b6d70]">Record ID</p>
+            <p className="serif-display text-lg text-[#8a7548]">#0142</p>
           </div>
         </div>
 
         <div
-          className="rounded-2xl border border-white/15 shadow-2xl"
+          className="rounded-2xl border border-[#d9bb77]/25 shadow-xl"
           style={{
-            background:
-              "linear-gradient(180deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.035) 100%)",
-            boxShadow: "0 30px 60px -20px rgba(0,0,0,0.6)",
+            background: "linear-gradient(180deg, #f1f2f3 0%, #e6e7e9 100%)",
+            boxShadow: "0 30px 60px -20px rgba(28,43,56,0.15)",
           }}
         >
           <form
@@ -95,18 +94,18 @@ export default function AddStudent() {
             {/* Basic Information */}
             <section>
               <div className="flex items-center gap-3 mb-6">
-                <span className="serif-display text-sm text-[#d9bb77]">01</span>
-                <h2 className="text-[13px] font-medium text-[#e9eff0]">
+                <span className="serif-display text-sm text-[#8a7548]">01</span>
+                <h2 className="text-[13px] font-medium text-[#2c2e31]">
                   Basic information
                 </h2>
-                <span className="flex-1 h-px bg-white/10" />
+                <span className="flex-1 h-px bg-[#1c1f22]/10" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="md:col-span-2">
                   <label
                     htmlFor="studentName"
-                    className="block text-xs text-[#a9bbc4] mb-2"
+                    className="block text-xs text-[#6b6d70] mb-2"
                   >
                     Full name
                   </label>
@@ -118,14 +117,14 @@ export default function AddStudent() {
                       e.target.value.length <= 20 && setName(e.target.value)
                     }
                     placeholder="e.g. Ahmed Raza"
-                    className="w-full bg-transparent border-b border-white/20 pb-3 text-zinc-100 text-[15px] transition-colors duration-200 focus:border-[#d9bb77]"
+                    className="w-full bg-transparent border-b border-[#1c1f22]/20 pb-3 text-zinc-800 text-[15px] transition-colors duration-200 focus:border-[#8a7548]"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="age"
-                    className="block text-xs text-[#a9bbc4] mb-2"
+                    className="block text-xs text-[#6b6d70] mb-2"
                   >
                     Age
                   </label>
@@ -135,14 +134,14 @@ export default function AddStudent() {
                     value={age}
                     onChange={(e) => setAge(e.target.value)}
                     placeholder="e.g. 20"
-                    className="w-full bg-transparent border-b border-white/20 pb-3 text-zinc-100 text-[15px] transition-colors duration-200 focus:border-[#d9bb77]"
+                    className="w-full bg-transparent border-b border-[#1c1f22]/20 pb-3 text-zinc-800 text-[15px] transition-colors duration-200 focus:border-[#8a7548]"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="city"
-                    className="block text-xs text-[#a9bbc4] mb-2"
+                    className="block text-xs text-[#6b6d70] mb-2"
                   >
                     City
                   </label>
@@ -152,7 +151,7 @@ export default function AddStudent() {
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                     placeholder="e.g. Kohat"
-                    className="w-full bg-transparent border-b border-white/20 pb-3 text-zinc-100 text-[15px] transition-colors duration-200 focus:border-[#d9bb77]"
+                    className="w-full bg-transparent border-b border-[#1c1f22]/20 pb-3 text-zinc-800 text-[15px] transition-colors duration-200 focus:border-[#8a7548]"
                   />
                 </div>
               </div>
@@ -161,18 +160,18 @@ export default function AddStudent() {
             {/* Academic Information */}
             <section>
               <div className="flex items-center gap-3 mb-6">
-                <span className="serif-display text-sm text-[#d9bb77]">02</span>
-                <h2 className="text-[13px] font-medium text-[#e9eff0]">
+                <span className="serif-display text-sm text-[#8a7548]">02</span>
+                <h2 className="text-[13px] font-medium text-[#2c2e31]">
                   Academic record
                 </h2>
-                <span className="flex-1 h-px bg-white/10" />
+                <span className="flex-1 h-px bg-[#1c1f22]/10" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label
                     htmlFor="marks"
-                    className="block text-xs text-[#a9bbc4] mb-2"
+                    className="block text-xs text-[#6b6d70] mb-2"
                   >
                     Marks
                   </label>
@@ -182,61 +181,22 @@ export default function AddStudent() {
                     value={marks}
                     onChange={(e) => setMarks(e.target.value)}
                     placeholder="e.g. 85"
-                    className="w-full bg-transparent border-b border-white/20 pb-3 text-zinc-100 text-[15px] transition-colors duration-200 focus:border-[#d9bb77]"
+                    className="w-full bg-transparent border-b border-[#1c1f22]/20 pb-3 text-zinc-800 text-[15px] transition-colors duration-200 focus:border-[#8a7548]"
                   />
                 </div>
-
-                {/* <div>
-                  <label
-                    htmlFor="result"
-                    className="block text-xs text-[#a9bbc4] mb-2"
-                  >
-                    Result
-                  </label>
-                  <select
-                    id="result"
-                    value={result}
-                    onChange={(e) => setResult(e.target.value)}
-                    className="w-full bg-transparent border-b border-white/20 pb-3 text-[15px] appearance-none transition-colors duration-200 focus:border-[#d9bb77]"
-                    style={{ color: result ? "#f4f4f5" : "#6b6b70" }}
-                  >
-                    <option value="" style={{ background: "#1c1c1e" }}>
-                      Select result
-                    </option>
-                    <option value="Pass" style={{ background: "#1c1c1e" }}>
-                      Pass
-                    </option>
-                    <option value="Fail" style={{ background: "#1c1c1e" }}>
-                      Fail
-                    </option>
-                  </select>
-                </div> */}
-                {/* <div>
-                  <label className="block text-xs text-[#a9bbc4] mb-2">
-                    Result
-                  </label>
-
-                  <div className="w-full border-b border-white/20 pb-3 text-[15px] text-zinc-100">
-                    {marks
-                      ? Number(marks) >= 75
-                        ? "Pass"
-                        : "Fail"
-                      : "Result will be calculated automatically"}
-                  </div>
-                </div> */}
               </div>
             </section>
 
             {/* Note */}
-            <div className="rounded-xl border border-[#d9bb77]/25 bg-[#081522]/25 px-5 py-4">
-              <p className="text-[13px] leading-6 text-[#afbec5]">
+            <div className="rounded-xl border border-[#d9bb77]/30 bg-[#8a7548]/[0.06] px-5 py-4">
+              <p className="text-[13px] leading-6 text-[#5c5e61]">
                 Double-check the name, age, city, marks and result before saving
-                — records can&aops;t be edited once submitted.
+                — records can&apos;t be edited once submitted.
               </p>
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col-reverse gap-3 border-t border-white/10 pt-7 sm:flex-row sm:justify-end">
+            <div className="flex flex-col-reverse gap-3 border-t border-[#1c1f22]/10 pt-7 sm:flex-row sm:justify-end">
               <button
                 type="reset"
                 onClick={() => {
@@ -246,7 +206,7 @@ export default function AddStudent() {
                   setMarks("");
                   setResult("");
                 }}
-                className="rounded-full px-6 py-3 text-sm text-[#c4d1d5] border border-white/20 transition-colors duration-200 hover:text-white hover:border-[#d9bb77]"
+                className="rounded-full px-6 py-3 text-sm text-[#4a4c4f] border border-[#1c1f22]/20 transition-colors duration-200 hover:text-[#1c1f22] hover:border-[#8a7548]"
               >
                 Clear
               </button>
@@ -261,7 +221,7 @@ export default function AddStudent() {
           </form>
         </div>
 
-        <p className="mt-8 text-center text-[11px] uppercase tracking-[0.16em] text-[#8fa8b5]">
+        <p className="mt-8 text-center text-[11px] uppercase tracking-[0.16em] text-[#6b6d70]">
           Student Management System
         </p>
       </div>
