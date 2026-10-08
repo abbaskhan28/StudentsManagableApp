@@ -462,7 +462,7 @@ function Contact({ msgs, setMsgs, toast }: ContactProps) {
         </button>
       </div>
       <div className={card + " p-6 grid gap-3 content-start"}>
-        <p>📍 Main Road, Kohat, Khyber Pakhtunkhwa</p>
+        <p>📍 Billitang, Kohat, Khyber Pakhtunkhwa</p>
         <p>
           📞{" "}
           <a className="underline" href="tel:+923000000000">
@@ -471,8 +471,8 @@ function Contact({ msgs, setMsgs, toast }: ContactProps) {
         </p>
         <p>
           ✉️{" "}
-          <a className="underline" href="mailto:info@noorschool.edu.pk">
-            info@noorschool.edu.pk
+          <a className="underline" href="mailto:info@ASschool.edu.pk">
+            info@ASschool.edu.pk
           </a>
         </p>
         <p>🕗 Mon – Sat, 8 am – 2 pm</p>
@@ -710,7 +710,7 @@ export default function SchoolSite() {
             <span className="w-9 h-9 rounded-lg bg-amber-400 text-indigo-950 grid place-items-center">
               N
             </span>
-            Noor Public School
+            AS Public School
           </a>
           <nav className="hidden lg:flex gap-5 text-sm text-indigo-100">
             {NAV.map((n) => (
@@ -864,7 +864,7 @@ export default function SchoolSite() {
 
       <Section
         id="gallery"
-        title="Life at Noor"
+        title="Life at AS"
         sub="Tap a photo to open it. Use the arrow keys to move through."
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -979,7 +979,7 @@ export default function SchoolSite() {
       </Section>
 
       <footer className="bg-indigo-950 text-indigo-300 text-sm text-center py-6">
-        © 2026 Noor Public School ·{" "}
+        © 2026 AS Public School ·{" "}
         <button onClick={() => setAdmin(true)} className="underline">
           Office login
         </button>
